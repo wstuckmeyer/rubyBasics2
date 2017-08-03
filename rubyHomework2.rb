@@ -76,6 +76,27 @@ tower.go_down
 puts tower.inspect
 tower.cheery_greeting
 
+#Extra Challenges
+
+#create an array
+people = ['Bob', 'Linda', 'Tina', 'Louise', 'Gene']
+
+#create a method that takes in an array and a number
+
+def rotate(array, number)
+	#put the strings we want to move into a new string
+	newArray = array.shift
+	#subtract the number
+	number-=1
+	#push the strings to the back of the array
+	array.push(newArray)
+	#keep doing this until our number is 0
+	rotate(array, number) unless number ==0
+end
+
+
+rotate(people, 3)
+puts people
 
 
 
