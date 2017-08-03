@@ -52,14 +52,18 @@ class Elevator
 		@floor = 1
 	end
 	def go_up
-		if @floor<=12
+		if @floor==12
 		@floor = @floor+1
 		else
 		puts "You can't go that high up"
 		end
 	end
 	def go_down
+		if @floor ==1
+			puts "Not going down there"
+		else	
 		@floor = @floor-1
+		end
 	end
 	def cheery_greeting
 		puts "Welcome to floor #{@floor}"
