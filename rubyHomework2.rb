@@ -53,9 +53,9 @@ class Elevator
 	end
 	def go_up
 		if @floor==12
-		@floor = @floor+1
+			puts "You can't go that high up"
 		else
-		puts "You can't go that high up"
+			@floor = @floor+1
 		end
 	end
 	def go_down
@@ -72,7 +72,7 @@ end
 
 
 tower = Elevator.new
-tower.go_up
+tower.go_down
 puts tower.inspect
 tower.cheery_greeting
 
